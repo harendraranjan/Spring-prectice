@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+    <context:annotation-config />
+
+    <!-- Define only the "st" bean, and let Spring manage the "Address" bean automatically -->
+     <bean name="add" class="com.harendra.autowire.xml.Address">
+		<property name="city" value="Saket"></property>
+		<property name="state" value="Delhi"></property>
+	</bean>
+	
+    <bean name="st" class="com.harendra.autowire.autonnotation.Student">
+        
+    </bean>
+   
+</beans>

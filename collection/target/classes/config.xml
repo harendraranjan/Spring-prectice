@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="myBean" class="com.harendra.collection.Student1">
+		<property name="name" value="Harendra"/>
+		<property name="Address" >
+			<list>
+				<value> Bihar </value>
+				<value>Sitamrhi</value>
+				<value>India</value>
+			</list>
+		</property>
+		<property name="phone">
+			<set>
+				<value>9821</value>
+				<value>9613</value>
+				<value>7321</value>
+				<value>98211</value>
+			</set>
+			
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="java" value="2 month"/>
+				<entry key="c++" value="1 month"/>
+			</map>
+		</property>
+	</bean>
+
+</beans>

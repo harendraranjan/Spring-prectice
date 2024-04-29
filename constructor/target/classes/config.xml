@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    
+    <bean name="ce" class="com.harendra.constructor.Certificate">
+    	<constructor-arg name="id" value="1"/>
+    	<constructor-arg name="Cname" value="MCA"/>
+	</bean>
+ 
+	
+	<bean id="myBean" class="com.harendra.constructor.Student">
+		<constructor-arg value="107" type="int" index="0"/>
+		<constructor-arg value="Harendra" />
+		<constructor-arg value="Noida"/>
+	
+		<constructor-arg>
+			<list>
+				<value>9821</value>
+				<value>9613</value>
+				<value>9077</value>
+			</list>
+		</constructor-arg>
+		
+		<constructor-arg ref="ce"/>
+		
+	</bean>
+</beans>
